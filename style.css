@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: lightblue;
+    background-color: rgba(0, 0, 39, 0.145);
+    padding: .4rem .6rem;
+    margin: 02rem;
+    border-radius: 15px;
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+
+nav{
+    padding: 2rem;
+    background-color: steelblue;
+}
+
+
+
+.nav__link{
+    transition: .3s;
+}
+
+.nav__link:hover ,
+.nav__submenu li a:hover{
+    background-color: aliceblue;
+    color: rgb( 32, 32, 32);
+}
+
+.nav__submenu{
+    display: none;
+}
+
+
+.trigger:hover > .nav__submenu{
+         display: block;
+         position: absolute;
+         background-color: steelblue ;
+         border-radius: 15px;
+         box-shadow: 5px 10px 15px #888888;
+}
+
+.nav__submenu li{
+    margin: 1rem 0;
+}
+
+h1{
+    color: midnightblue;
+    text-align: center;
+    font-family: 'Wix Madefor Display', sans-serif;
+
+}
+
+h2{
+    color: midnightblue;
+    text-align: center;
+    font-family: 'Wix Madefor Display', sans-serif;
+    margin: 5%;
+}
+
+.card{
+    background-color: cornflowerblue;
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 5%;
+    margin: 1rem;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card .card_letra{
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+
+.conteiner{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.card div{
+    display: flex;
+    justify-content:space-between ;
+}
+
+.card div a{
+    background-color: aliceblue;
+    padding: 1rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: min-content min-content  min-content min-content min-content  ;
+    grid-template-areas: 
+      "titulo titulo"
+      "subtitulo subtitulo"
+      "block-1 block-2"
+      "subtitulo2 subtitulo2"
+      "block-3 block-4";
+    
+}
+
+
+.grid .grid_titulo{
+    grid-area: titulo;
+    padding: 3rem;
+}
+
+.grid_block-subtitulo{
+    grid-area: subtitulo;
+}
+
+.grid_block1{
+    grid-area: block-1;
+}
+
+.grid_block2{
+    grid-area: block-2;
+}
+
+.grid_block-subtitulo2{
+    grid-area: subtitulo2;
+}
+
+.grid_block3{
+    grid-area: block-3;
+}
+
+.grid_block4{
+    grid-area: block-4;
+}
+
+.grid_blockflex{
+    padding: 5rem;
+}
+
+.preguntas{
+    font-family: 'Wix Madefor Display', sans-serif;
+    margin: 4rem;
+    justify-content: left;
+}
+
+
+
+.footer_index{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    
+    
+}
+
+
+.footer_div{
+    font-family: 'Wix Madefor Display', sans-serif;
+    padding: .4rem .6rem;
+    margin: 0.5rem;
+}
+
+
+
+
+/*----MEDIA QUERIS---*/
+
+@media screen and (max-width: 1200px) {
+      body{
+        background-color: lightsteelblue;
+      }
+      .grid {
+        grid-template-areas: 
+        "titulo titulo"
+        "subtitulo block-1"
+        "block-2 ..."
+        "subtitulo2 block-3"
+        "block-4 ..."
+      }
+
+      .grid_titulo{
+        padding: 2rem;
+        text-align: center;
+      }
+}
+
+@media screen and (max-width: 780px) {
+      body{
+        background-color: aliceblue ;
+      }
+      nav{
+        padding: 0.5rem;
+        background-color: steelblue;
+      }
+      .nav__link{
+        margin: 0.2rem;
+        font-size: 1rem;
+      }
+    
+      .grid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
+        grid-template-areas:  
+          "titulo"
+          "subtitulo"
+          "block-1"
+          "block-2"
+          "subtitulo2"
+          "block-3"
+          "block-4";
+        margin: 10%;
+       }
+       .footer_index{
+        text-align: center;
+        padding: auto;
+       }
+}
+
+
+@media screen and (max-width: 480px) {
+       body{
+        background-color: lavender;
+       }
+       .nav{
+        flex-direction: column;
+        text-align: center;
+       }
+
+       .footer_div{
+        flex-direction: column;
+       }
+       
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
